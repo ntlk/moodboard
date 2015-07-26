@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Moodboard — a small JavaScript library for presenting image moodboards on the web</title>
+    <link href="moodboard/css/moodboard.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/color-brewer.css">
+    <script src="js/highlight.js"></script>
+    <script src="moodboard/js/moodboard.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        new Moodboard('img', {
+          coverage: 1
+        });
+      });
+      hljs.initHighlightingOnLoad();
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Moodboard</h1>
+    </header>
+    <section class="images">
+      <img src="examples/sweden/img/01.jpg">
+      <img src="examples/sweden/img/02.jpg">
+      <img src="examples/sweden/img/03.jpg">
+      <img src="examples/sweden/img/04.jpg">
+      <img src="examples/sweden/img/05.jpg">
+      <img src="examples/sweden/img/06.jpg">
+      <img src="examples/sweden/img/07.jpg">
+      <img src="examples/sweden/img/08.jpg">
+      <img src="examples/sweden/img/09.jpg">
+    </section>
+    <section class="copy">
+      <p>Moodboard is a small JavaScript library for presenting image moodboards on the web.</p>
+      <h2 id="features">Features</h2>
+      <ul>
+        <li>Small (5KB minified)</li>
+        <li>Does only one thing</li>
+        <li>Has a decent CSS-only fallback</li>
+        <li>You can configure image size variation and how much space they cover</li>
+      </ul>
+      <h2 id="demos">Demos</h2>
+      <p>This page uses Moodboard for the background image placement. Refresh the page to see a new layout.</p>
+      <p>Here are some other examples:</p>
+      <ul class="plain">
+        <li><a href="examples/sweden/index.html">Sweden</a> — using default settings</li>
+        <li><a href="examples/sweden-no-js/index.html">Sweden (no JavaScript)</a> — version showing what the page looks like if JavaScript can’t run</li>
+        <li><a href="examples/food/index.html">Nat’s vegan cooking</a> — set to use more of the available space for images</li>
+      </ul>
+      <h2 id="download">Download</h2>
+      <p>The library consists of two files, one includes the styling, and the other contains the logic for image handling and placement.</p>
+      <p>Unless you want to edit the JS file yourself, I suggest you download only the minified version.</p>
+      <ul class="plain">
+        <li><a href="moodboard/js/moodbard.js">moodboard.js</a> (unminified, 6KB)</li>
+        <li><a href="moodboard/js/moodbard.min.js">moodboard.min.js</a> (minified, 4KB)</li>
+        <li><a href="moodboard/css/moodbard.css">moodboard.css</a> (1KB)</li>
+      </ul>
+      <p>You can <a href="https://github.com/ntlk/moodboard">view the code on GitHub</a>.</p>
+      <h2 id="installation">Installation</h2>
+      <p>First include the required files on your page.</p>
+<pre><code class="html">&lt;link href="moodboard.css" rel="stylesheet"&gt;
+&lt;script src="moodboard.min.js"&gt;&lt;/script&gt;
+</code></pre>
+      <p>Insert images into your page, and tell the Moodboard how to find them. For example, you can give it <em>all</em> of the images on the page:</p>
+<pre><code class="html">&lt;script&gt;
+  new Moodboard('img');
+&lt;/script&gt;
+</code></pre>
+      <p>You can use other selectors too, for example, all elements with a class “photo”:</p>
+<pre><code class="js">new Moodboard('.photo');</code></pre>
+
+      <p>If you want to configure moodboard, you can do it like this:</p>
+<pre><code class="js">new Moodboard('.photo', {
+  coverage: 0.2, // roughly how much of the space to cover with photos
+  variation: 0.2, // how much variation should there be between image sizes
+  resizeDelay: 300, // in miliseconds, how long to wait before repositioning photos when the browser window resizes
+  disableResize: false // whether to stop repositioning images when the browser window resizes
+});</code></pre>
+      <p>View source of the <a href="#demos">demos</a> above, I kept them simple so it’s easy to see how Moodboard is used there.</p>
+      <h2 id="credits">Credits</h2>
+      <p>Built by <a href="http://natbuckley.co.uk">Nat Buckley</a> in 2015. </p>
+      <h2 id="license">License</h2>
+      <p>This work, excluding images, is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+      <p>All photos on this website were taken by <a href="http://natbuckley.co.uk">Nat Buckley</a>, are copyrighted material and all rights are reserved.</p>
+    </section>
+  </body>
+</html>
