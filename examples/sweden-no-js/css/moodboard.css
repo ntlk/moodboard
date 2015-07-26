@@ -1,0 +1,83 @@
+/*
+ * Moodboard v1.0.0
+ * a moodboard layout library
+ *
+ * Licensed under Creative Commons
+ * Attribution-NonCommercial-ShareAlike
+ * 4.0 International
+ *
+ * http://creativecommons.org/licenses/by-nc-sa/4.0/
+ *
+ * http://ntlk.net
+ * Copyright 2015 ntlk
+ */
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: white;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 2vh 2vw;
+  text-align: center;
+  display: table;
+  max-width: 100vw;
+}
+
+img {
+  display: inline-block;
+  float: right;
+  width: 31.9vw;
+  padding: 2vw;
+  mix-blend-mode: multiply;
+}
+
+header {
+  margin: 1em auto;
+}
+
+.js header {
+  text-align: center;
+  white-space: nowrap;
+  position: relative;
+  z-index: 50;
+  overflow: hidden;
+  margin: 0;
+}
+
+.js header:before {
+  content: '';
+  display: inline-block;
+  height: 96vh;
+  vertical-align: middle;
+  margin-right: -0.25em; /* Adjusts for spacing */
+}
+
+header:before {
+  display: none;
+}
+
+h1 {
+  white-space: normal;
+  margin: 0 auto;
+  display: inline-block;
+  vertical-align: middle;
+  font-family: Avenir, 'Avenir Next', 'Open Sans', Futura, 'Gill Sans', 'Segoe UI', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 3em;
+  color: black;
+  color: rgba(0, 0, 0, 0.85);
+  mix-blend-mode: multiply;
+  border: 0.15em solid black;
+  border: 0.15em solid rgba(0, 0, 0, 0.85);
+  padding: 0.2em 0.5em;
+  background: white;
+  background: rgba(255, 255, 255, 0.6);
+  line-height: 1.1;
+}
