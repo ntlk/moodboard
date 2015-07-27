@@ -72,6 +72,7 @@
       <p>You can use other selectors too, for example, all elements with a class “photo”:</p>
 <pre><code class="js">new Moodboard('.photo');</code></pre>
 
+      <h2 id="configuration">Configuration</h2>
       <p>If you want to configure moodboard, you can do it like this:</p>
 <pre><code class="js">new Moodboard('.photo', {
   coverage: 0.2, // roughly how much of the space to cover with photos
@@ -80,6 +81,12 @@
   disableResize: false // whether to stop repositioning images when the browser window resizes
 });</code></pre>
       <p>View source of the <a href="#demos">demos</a> above, I kept them simple so it’s easy to see how Moodboard is used there.</p>
+      <h2 id="titles">Titles</h2>
+      <p>To include a centered title in the page you need the following markup:</p>
+<pre><code class="html">&lt;header&gt;
+  &lt;h1&gt;Sweden, June 2013&lt;/h1&gt;
+&lt;/header&gt;
+</code></pre>
       <h2 id="credits">Credits</h2>
       <p>Built by <a href="http://natbuckley.co.uk">Nat Buckley</a> in 2015. </p>
       <h2 id="license">License</h2>
