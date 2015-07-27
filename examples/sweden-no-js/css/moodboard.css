@@ -2,11 +2,7 @@
  * Moodboard v1.0.0
  * a moodboard layout library
  *
- * Licensed under Creative Commons
- * Attribution-NonCommercial-ShareAlike
- * 4.0 International
- *
- * http://creativecommons.org/licenses/by-nc-sa/4.0/
+ * Licensed under the MIT License (MIT)
  *
  * http://ntlk.net
  * Copyright 2015 ntlk
